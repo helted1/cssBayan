@@ -1,10 +1,9 @@
 body {
-    font-family: Verdana, serif;
+    font-family: 'Arial Black', Gadget, sans-serif;
 }
 
 .container {
     margin: 0 auto;
-    padding-top: 6%;
     max-width: 60%;
 }
 
@@ -53,19 +52,35 @@ h1 {
     margin: 0 auto;
     width: 0;
     height: 0;
-    transition: all 0.25s ease-in;
+    transition: all 0.45s ease-in;
 }
 
 .radio:checked ~ .image {
-    width: 30%;
-    height: 30%;
+    width: 25%;
+    height: 25%;
 }
 
 .radio:checked ~ .title-flex .ico {
-    opacity: 1;
+    transform: rotate(45deg);
 }
 
 .radio:checked ~ .title-flex .title {
     color: black;
 }
 
+@media (hover:hover) {
+    .container:hover .label .title-flex .ico {
+        opacity: 1;
+    }
+    .radio:hover ~ .image {
+        width: 25%;
+        height: 25%;
+    }
+    .radio:hover ~ .title-flex .ico {
+        transition-delay: 0.1s;
+        transform: rotate(45deg);
+    }
+    .container:hover .label .title-flex .title {
+        color: black;
+    }
+}
