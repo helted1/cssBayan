@@ -4,7 +4,7 @@ body {
 
 .container {
     margin: 0 auto;
-    padding-top: 10%;
+    padding-top: 6%;
     max-width: 60%;
 }
 
@@ -21,7 +21,6 @@ h1 {
 
 .label {
     display: block;
-    padding-top: 0.5em;
 }
 
 .radio {
@@ -29,7 +28,7 @@ h1 {
 }
 
 .title-flex {
-    margin: 0 0.5em;
+    margin: -0.5em 0.5em 1em 0.5em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,6 +36,8 @@ h1 {
 
 .title {
     font-weight: bold;
+    color: forestgreen;
+    transition: all 0.2s ease-in;
 }
 
 .ico {
@@ -44,20 +45,27 @@ h1 {
     width: 13px;
     height: 13px;
     background-repeat: no-repeat;
+    opacity: 0;
+    transition: all 0.3s ease-in;
 }
 
 .image {
-    opacity: 0;
-    max-width: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    transition: all 0.25s ease-in;
 }
 
 .radio:checked ~ .image {
+    width: 30%;
+    height: 30%;
+}
+
+.radio:checked ~ .title-flex .ico {
     opacity: 1;
-    max-width: 50%;
 }
 
-
-
-.radio:checked .ico {
-    transform: rotate(45deg);
+.radio:checked ~ .title-flex .title {
+    color: black;
 }
+
