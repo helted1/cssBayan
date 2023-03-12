@@ -1,0 +1,63 @@
+body {
+    font-family: Verdana, serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding-top: 10%;
+    max-width: 60%;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 10%;
+    padding-bottom: 2%;
+}
+
+.bayan {
+    border-top: 1px solid black;
+}
+
+.label {
+    display: block;
+    padding-top: 0.5em;
+}
+
+.radio {
+    appearance: none;
+}
+
+.title-flex {
+    margin: 0 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.ico {
+    background-image: url("img/ico.png");
+    width: 13px;
+    height: 13px;
+    background-repeat: no-repeat;
+}
+
+.image {
+    opacity: 0;
+    max-width: 0;
+}
+
+.radio:checked ~ .image {
+    opacity: 1;
+    max-width: 50%;
+}
+
+
+
+.radio:checked .ico {
+    transform: rotate(45deg);
+}
