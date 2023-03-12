@@ -1,10 +1,12 @@
 body {
     font-family: 'Arial Black', Gadget, sans-serif;
+    user-select: none;
 }
 
 .container {
     margin: 0 auto;
     max-width: 60%;
+    font-size: 1.5em;
 }
 
 h1 {
@@ -82,5 +84,31 @@ h1 {
     }
     .container:hover .label .title-flex .title {
         color: black;
+    }
+    .label:active:hover .title-flex .title {
+        color: forestgreen;
+        transition: color 0.1s ease-in;
+    }
+    .label:active:hover {
+        cursor: grab;
+    }
+    .label:active:hover .image {
+        filter: brightness(65%);
+    }
+}
+
+@media (min-width: 320px) and (max-width: 820px) {
+    .container {
+        font-size: 1em;
+    }
+    h1 {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+@media (min-width: 821px) and (max-width: 1919px) {
+    .container {
+        font-size: 1.2em;
     }
 }
